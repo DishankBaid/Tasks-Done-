@@ -66,6 +66,8 @@ function handleEdit(e) {
   newTextArea.value = val;
   newTextArea.classList.add("task-input");
 
+  taskItem.querySelector(".check-box").classList.add("hidden");
+
   taskItem.replaceChild(newTextArea, span);
   newTextArea.addEventListener("keypress", handleSave);
 }
@@ -75,15 +77,17 @@ function handleSave(e) {
     if (!e.shiftKey) {
       e.preventDefault();
       const taskItem = e.target.parentElement;
-      console.log(taskItem);
-
       const textarea = taskItem.querySelector("textarea");
       if (textarea.value === "") return;
 
       const span = document.createElement("span");
       span.innerText = textarea.value;
 
-      taskItem.querySelector(".hidden").classList.remove("hidden");
+      const checkBox = taskItem.querySelector(".check-box");
+      checkBox.classList.remove("hidden");
+      checkBox.checked = false;
+
+      taskItem.querySelector(".edit-icon").classList.remove("hidden");
       taskItem.replaceChild(span, textarea);
     }
   }
