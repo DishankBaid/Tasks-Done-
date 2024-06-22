@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  background-color: bisque;
+  color: #5c4033;
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+.container {
+  position: absolute;
+  top: 15%;
+}
+
+.task-input {
+  width: 800px;
+  border-radius: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  display: block;
+  overflow: hidden;
+  resize: none;
+  height: 40px;
+  outline-color: #5c4033;
+}
+
+.task-container {
+  display: flex;
+}
+
+.task-list {
+  margin: 2px;
+  list-style: none;
+  width: 800px;
+}
+
+.task-item {
+  position: relative;
+  background-color: #fff;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid 2px;
+  display: flex;
+}
+
+i {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.icons {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  display: flex;
+  gap: 4px;
+}
+
+span {
+  margin-right: 20px;
+  text-align: justify;
+  padding: 2px;
+  margin-left: 20px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.check-box {
+  margin: 4px;
+  position: absolute;
+  top: 9px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  background-color: #5c4033 !important;
+  color: #5c4033 !important;
+}
